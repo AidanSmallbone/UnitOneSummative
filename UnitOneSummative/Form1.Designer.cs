@@ -33,8 +33,10 @@
             this.drawHeroPictureBox = new System.Windows.Forms.PictureBox();
             this.drawHereLabel = new System.Windows.Forms.Label();
             this.clearButton = new System.Windows.Forms.Button();
-            this.h = new System.Windows.Forms.Button();
+            this.doneButton = new System.Windows.Forms.Button();
+            this.heroDonePictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.drawHeroPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heroDonePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // heroLabel
@@ -51,10 +53,10 @@
             // 
             // drawHeroPictureBox
             // 
-            this.drawHeroPictureBox.BackColor = System.Drawing.SystemColors.Control;
+            this.drawHeroPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.drawHeroPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.drawHeroPictureBox.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.drawHeroPictureBox.Location = new System.Drawing.Point(165, 79);
+            this.drawHeroPictureBox.Location = new System.Drawing.Point(165, 75);
             this.drawHeroPictureBox.Name = "drawHeroPictureBox";
             this.drawHeroPictureBox.Size = new System.Drawing.Size(256, 256);
             this.drawHeroPictureBox.TabIndex = 1;
@@ -67,6 +69,7 @@
             // drawHereLabel
             // 
             this.drawHereLabel.AutoSize = true;
+            this.drawHereLabel.BackColor = System.Drawing.Color.Transparent;
             this.drawHereLabel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drawHereLabel.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.drawHereLabel.Location = new System.Drawing.Point(226, 196);
@@ -85,14 +88,25 @@
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
-            // h
+            // doneButton
             // 
-            this.h.Location = new System.Drawing.Point(427, 196);
-            this.h.Name = "h";
-            this.h.Size = new System.Drawing.Size(75, 23);
-            this.h.TabIndex = 4;
-            this.h.Text = "Done";
-            this.h.UseVisualStyleBackColor = true;
+            this.doneButton.Location = new System.Drawing.Point(427, 196);
+            this.doneButton.Name = "doneButton";
+            this.doneButton.Size = new System.Drawing.Size(75, 23);
+            this.doneButton.TabIndex = 4;
+            this.doneButton.Text = "Done";
+            this.doneButton.UseVisualStyleBackColor = true;
+            this.doneButton.Click += new System.EventHandler(this.doneButton_Click);
+            // 
+            // heroDonePictureBox
+            // 
+            this.heroDonePictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.heroDonePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.heroDonePictureBox.Location = new System.Drawing.Point(12, 12);
+            this.heroDonePictureBox.Name = "heroDonePictureBox";
+            this.heroDonePictureBox.Size = new System.Drawing.Size(128, 128);
+            this.heroDonePictureBox.TabIndex = 5;
+            this.heroDonePictureBox.TabStop = false;
             // 
             // Form1
             // 
@@ -100,7 +114,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.h);
+            this.Controls.Add(this.heroDonePictureBox);
+            this.Controls.Add(this.doneButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.drawHereLabel);
             this.Controls.Add(this.drawHeroPictureBox);
@@ -110,6 +125,7 @@
             this.TransparencyKey = System.Drawing.Color.Transparent;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.drawHeroPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heroDonePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,7 +137,8 @@
         private System.Windows.Forms.PictureBox drawHeroPictureBox;
         private System.Windows.Forms.Label drawHereLabel;
         private System.Windows.Forms.Button clearButton;
-        private System.Windows.Forms.Button h;
+        private System.Windows.Forms.Button doneButton;
+        private System.Windows.Forms.PictureBox heroDonePictureBox;
     }
 }
 

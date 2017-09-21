@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace UnitOneSummative
 
     {
 
-        Point lastPoint = Point.Empty; //creates a variable to track our mouse point
+        Point lastPoint = Point.Empty; //creats a point variable to keep track of our mose position, and sets it to have no value
         bool isMouseDown = new Boolean(); //creates a boolean to track is the mouse is pressed
 
         public Form1()
@@ -35,10 +36,6 @@ namespace UnitOneSummative
                 isMouseDown = true; //sets the bool ismouseclicked to true -- it is
 
             }
-
-
-
-
         }
 
         private void drawHeroPictureBox_MouseMove(object sender, MouseEventArgs e) //check to see if the user has moved the mouse
@@ -66,7 +63,7 @@ namespace UnitOneSummative
                         {
 
                             g.DrawLine(new Pen(Color.Black, width: 2), lastPoint, e.Location); //create a pen tool
-
+                            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias; //makes the line a little smoother
                         }
 
                         drawHeroPictureBox.Refresh(); //refreshes the picturebox once we're done making it into a graphics object
@@ -89,7 +86,23 @@ namespace UnitOneSummative
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-         
+            if (drawHeroPictureBox.Image != null) //checks to see that the image isn't already cleared
+            {
+                drawHeroPictureBox.Image = null; //clears the image
+                Invalidate(); //refreshes the picture box
+            }
+        }
+
+        private void doneButton_Click(object sender, EventArgs e)
+        {
+            drawHeroPictureBox.Image.Save(@".\hero.png", ImageFormat.Png); //saves the generated image to the root folder of the program
+            Image doneHero = Image.FromFile(@".\hero.png"); //loads the saved image in as a new image object so it's easier to work with
+            drawHeroPictureBox.Dispose(); //all of these dispose of the stuff we used to draw our hero
+            drawHereLabel.Dispose();
+            heroLabel.Dispose();
+            clearButton.Dispose();
+            doneButton.Dispose();
+            heroDonePictureBox.BackgroundImage = doneHero; //sets the background of our new picturebox to the image object we created
         }
     }
 }
