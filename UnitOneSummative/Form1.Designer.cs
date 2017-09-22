@@ -44,6 +44,7 @@
             this.purpleButton = new System.Windows.Forms.Button();
             this.pinkButton = new System.Windows.Forms.Button();
             this.penSizeSelector = new System.Windows.Forms.NumericUpDown();
+            this.penSizeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.drawHeroPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heroDonePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.penSizeSelector)).BeginInit();
@@ -226,12 +227,23 @@
             0});
             this.penSizeSelector.ValueChanged += new System.EventHandler(this.penSizeSelector_ValueChanged);
             // 
+            // penSizeLabel
+            // 
+            this.penSizeLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.penSizeLabel.Location = new System.Drawing.Point(428, 209);
+            this.penSizeLabel.Name = "penSizeLabel";
+            this.penSizeLabel.Size = new System.Drawing.Size(57, 15);
+            this.penSizeLabel.TabIndex = 16;
+            this.penSizeLabel.Text = "Pen Size";
+            this.penSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.penSizeLabel);
             this.Controls.Add(this.penSizeSelector);
             this.Controls.Add(this.pinkButton);
             this.Controls.Add(this.purpleButton);
@@ -275,6 +287,7 @@
         private System.Windows.Forms.Button purpleButton;
         private System.Windows.Forms.Button pinkButton;
         private System.Windows.Forms.NumericUpDown penSizeSelector;
+        private System.Windows.Forms.Label penSizeLabel;
     }
 }
 

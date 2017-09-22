@@ -161,6 +161,7 @@ namespace UnitOneSummative
         private void penSizeSelector_ValueChanged(object sender, EventArgs e)
         {
             penSize = Convert.ToSingle(penSizeSelector.Value); //converts the input of the pen size box to a float point value so the pen thing can understand it
+            penSizeLabel.Dispose();
 
         }
     }
