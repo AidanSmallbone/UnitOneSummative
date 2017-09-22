@@ -17,6 +17,10 @@ namespace UnitOneSummative
 
         Point lastPoint = Point.Empty; //creats a point variable to keep track of our mose position, and sets it to have no value
         bool isMouseDown = new Boolean(); //creates a boolean to track is the mouse is pressed
+        string penColor = "Black"; //this sets the default pen color and allows us to keep track of the pen color
+        float penSize = 2;
+
+
 
         public Form1()
         {
@@ -62,7 +66,7 @@ namespace UnitOneSummative
 
                         {
 
-                            g.DrawLine(new Pen(Color.Black, width: 2), lastPoint, e.Location); //create a pen tool
+                            g.DrawLine(new Pen(Color.FromName(penColor), width: penSize), lastPoint, e.Location); //create a pen tool
                             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias; //makes the line a little smoother
                         }
 
@@ -102,7 +106,62 @@ namespace UnitOneSummative
             heroLabel.Dispose();
             clearButton.Dispose();
             doneButton.Dispose();
+            blackButton.Dispose();
+            whiteButton.Dispose();
+            redButton.Dispose();
+            orangeButton.Dispose();
+            greenButton.Dispose();
+            blueButton.Dispose();
+            purpleButton.Dispose();
+            pinkButton.Dispose();
+            penSizeSelector.Dispose();
             heroDonePictureBox.BackgroundImage = doneHero; //sets the background of our new picturebox to the image object we created
+        }
+
+        private void blackButton_Click(object sender, EventArgs e)
+        {
+            penColor = "Black"; //sets the pen color to black
+        }
+
+        private void whiteButton_Click(object sender, EventArgs e)
+        {
+            penColor = "White"; //sets the pen color to white
+        }
+
+        private void redButton_Click(object sender, EventArgs e)
+        {
+            penColor = "Brown"; //sets the pen color to red
+        }
+
+        private void orangeButton_Click(object sender, EventArgs e)
+        {
+            penColor = "Coral"; //sets the pen color to orange
+        }
+
+        private void greenButton_Click(object sender, EventArgs e)
+        {
+            penColor = "SpringGreen"; //sets pen color to green
+        }
+
+        private void blueButton_Click(object sender, EventArgs e)
+        {
+            penColor = "SteelBlue"; //sets pen color to blue
+        }
+
+        private void purpleButton_Click(object sender, EventArgs e)
+        {
+            penColor = "MediumPurple"; //sets pen color to purple
+        }
+
+        private void pinkButton_Click(object sender, EventArgs e)
+        {
+            penColor = "LightPink"; //sets pen color to pink
+        }
+
+        private void penSizeSelector_ValueChanged(object sender, EventArgs e)
+        {
+            penSize = Convert.ToSingle(penSizeSelector.Value); //converts the input of the pen size box to a float point value so the pen thing can understand it
+
         }
     }
 }
