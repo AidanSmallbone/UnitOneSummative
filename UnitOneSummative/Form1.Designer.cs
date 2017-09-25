@@ -34,7 +34,6 @@
             this.drawHereLabel = new System.Windows.Forms.Label();
             this.clearButton = new System.Windows.Forms.Button();
             this.doneButton = new System.Windows.Forms.Button();
-            this.heroDonePictureBox = new System.Windows.Forms.PictureBox();
             this.blackButton = new System.Windows.Forms.Button();
             this.whiteButton = new System.Windows.Forms.Button();
             this.redButton = new System.Windows.Forms.Button();
@@ -45,7 +44,6 @@
             this.pinkButton = new System.Windows.Forms.Button();
             this.penSizeSelector = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.drawHeroPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heroDonePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.penSizeSelector)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,16 +105,6 @@
             this.doneButton.Text = "Done";
             this.doneButton.UseVisualStyleBackColor = true;
             this.doneButton.Click += new System.EventHandler(this.doneButton_Click);
-            // 
-            // heroDonePictureBox
-            // 
-            this.heroDonePictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.heroDonePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.heroDonePictureBox.Location = new System.Drawing.Point(443, 12);
-            this.heroDonePictureBox.Name = "heroDonePictureBox";
-            this.heroDonePictureBox.Size = new System.Drawing.Size(128, 128);
-            this.heroDonePictureBox.TabIndex = 5;
-            this.heroDonePictureBox.TabStop = false;
             // 
             // blackButton
             // 
@@ -241,7 +229,6 @@
             this.Controls.Add(this.redButton);
             this.Controls.Add(this.whiteButton);
             this.Controls.Add(this.blackButton);
-            this.Controls.Add(this.heroDonePictureBox);
             this.Controls.Add(this.doneButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.drawHereLabel);
@@ -251,7 +238,6 @@
             this.Text = "Interactive Greeting Card";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.drawHeroPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heroDonePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.penSizeSelector)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -265,7 +251,6 @@
         private System.Windows.Forms.Label drawHereLabel;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button doneButton;
-        private System.Windows.Forms.PictureBox heroDonePictureBox;
         private System.Windows.Forms.Button blackButton;
         private System.Windows.Forms.Button whiteButton;
         private System.Windows.Forms.Button redButton;

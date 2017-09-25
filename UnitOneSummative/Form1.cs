@@ -100,22 +100,9 @@ namespace UnitOneSummative
         private void doneButton_Click(object sender, EventArgs e)
         {
             drawHeroPictureBox.Image.Save(@".\hero.png", ImageFormat.Png); //saves the generated image to the root folder of the program
-            Image doneHero = Image.FromFile(@".\hero.png"); //loads the saved image in as a new image object so it's easier to work with
-            drawHeroPictureBox.Dispose(); //all of these dispose of the stuff we used to draw our hero
-            drawHereLabel.Dispose();
-            heroLabel.Dispose();
-            clearButton.Dispose();
-            doneButton.Dispose();
-            blackButton.Dispose();
-            whiteButton.Dispose();
-            redButton.Dispose();
-            orangeButton.Dispose();
-            greenButton.Dispose();
-            blueButton.Dispose();
-            purpleButton.Dispose();
-            pinkButton.Dispose();
-            penSizeSelector.Dispose();
-            heroDonePictureBox.BackgroundImage = doneHero; //sets the background of our new picturebox to the image object we created
+            Form2 graphicsForm = new Form2(); //names our new form so we can easily interact with it
+            Hide(); //this hides the form we used to draw our character (not best for resource management but it makes it easier if we need to call on something from it later on)
+            graphicsForm.Show(); //shows the new form
         }
 
         private void blackButton_Click(object sender, EventArgs e)
@@ -161,7 +148,6 @@ namespace UnitOneSummative
         private void penSizeSelector_ValueChanged(object sender, EventArgs e)
         {
             penSize = Convert.ToSingle(penSizeSelector.Value); //converts the input of the pen size box to a float point value so the pen thing can understand it
-
         }
     }
 }
