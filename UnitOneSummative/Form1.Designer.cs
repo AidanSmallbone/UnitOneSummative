@@ -44,6 +44,7 @@
             this.pinkButton = new System.Windows.Forms.Button();
             this.penSizeSelector = new System.Windows.Forms.NumericUpDown();
             this.penSizeLabel = new System.Windows.Forms.Label();
+            this.blankCanvasLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.drawHeroPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.penSizeSelector)).BeginInit();
             this.SuspendLayout();
@@ -225,12 +226,26 @@
             this.penSizeLabel.Text = "Pen Size";
             this.penSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // blankCanvasLabel
+            // 
+            this.blankCanvasLabel.AutoSize = true;
+            this.blankCanvasLabel.BackColor = System.Drawing.Color.Transparent;
+            this.blankCanvasLabel.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blankCanvasLabel.ForeColor = System.Drawing.Color.Red;
+            this.blankCanvasLabel.Location = new System.Drawing.Point(171, 194);
+            this.blankCanvasLabel.Name = "blankCanvasLabel";
+            this.blankCanvasLabel.Size = new System.Drawing.Size(244, 18);
+            this.blankCanvasLabel.TabIndex = 17;
+            this.blankCanvasLabel.Text = "DRAW SOMETHING, YA GOOF!";
+            this.blankCanvasLabel.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.blankCanvasLabel);
             this.Controls.Add(this.penSizeLabel);
             this.Controls.Add(this.penSizeSelector);
             this.Controls.Add(this.pinkButton);
@@ -273,6 +288,7 @@
         private System.Windows.Forms.Button pinkButton;
         private System.Windows.Forms.NumericUpDown penSizeSelector;
         private System.Windows.Forms.Label penSizeLabel;
+        private System.Windows.Forms.Label blankCanvasLabel;
     }
 }
 

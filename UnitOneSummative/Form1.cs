@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -99,10 +100,24 @@ namespace UnitOneSummative
 
         private void doneButton_Click(object sender, EventArgs e)
         {
-            drawHeroPictureBox.Image.Save(@".\hero.png", ImageFormat.Png); //saves the generated image to the root folder of the program
-            Form2 graphicsForm = new Form2(); //names our new form so we can easily interact with it
-            Hide(); //this hides the form we used to draw our character (not best for resource management but it makes it easier if we need to call on something from it later on)
-            graphicsForm.Show(); //shows the new form
+            if (drawHeroPictureBox.Image == null) //makes sure the user doesn't try to click done without drawing something
+            {
+                blankCanvasLabel.Visible = true; //shows the label that tells you to draw something
+                drawHereLabel.Visible = false; //hides the label that tells you where to draw
+                Refresh(); //refreshes
+                Thread.Sleep(1000); //waits a second
+                blankCanvasLabel.Visible = false; //hides the label that tells you to draw something
+                drawHereLabel.Visible = true; //shows the label that tells you where to draw again
+                Refresh(); //refreshes
+            }
+
+            if (drawHeroPictureBox.Image != null) //does the thing if they drew something
+            {
+                drawHeroPictureBox.Image.Save(@".\hero.png", ImageFormat.Png); //saves the generated image to the root folder of the program
+                Form2 graphicsForm = new Form2(); //names our new form so we can easily interact with it
+                Hide(); //this hides the form we used to draw our character (not best for resource management but it makes it easier if we need to call on something from it later on)
+                graphicsForm.Show(); //shows the new form
+            }
         }
 
         private void blackButton_Click(object sender, EventArgs e)
@@ -148,6 +163,7 @@ namespace UnitOneSummative
         private void penSizeSelector_ValueChanged(object sender, EventArgs e)
         {
             penSize = Convert.ToSingle(penSizeSelector.Value); //converts the input of the pen size box to a float point value so the pen thing can understand it
+            penSizeLabel.Visible = false;
         }
     }
 }
