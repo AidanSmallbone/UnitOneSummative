@@ -48,9 +48,61 @@ namespace UnitOneSummative
             sceneOneLabelThree.Dispose();
             Refresh(); //refreshes
 
-            ///this part of the program deals with the second scene, our character shrinks down and then starts moving
-            ///i'll probably end up using methods within methods so i can be lazy and write all of my repetetive code only once
+            ///this part of the code will shrink our character down to half size.
+            ///i would have liked to use methods and math to make it easier to change
+            ///later on but whatever, that's more work.
 
+            Thread.Sleep(500);
+
+            heroDonePictureBox.Width = 243;
+            heroDonePictureBox.Height = 243;
+            Refresh();
+            heroDonePictureBox.Refresh();
+            Thread.Sleep(50);
+            heroDonePictureBox.Width = 230;
+            heroDonePictureBox.Height = 230;
+            Refresh();
+            heroDonePictureBox.Refresh();
+            Thread.Sleep(50);
+            heroDonePictureBox.Width = 217;
+            heroDonePictureBox.Height = 217;
+            Refresh();
+            heroDonePictureBox.Refresh();
+            Thread.Sleep(50);
+            heroDonePictureBox.Width = 204;
+            heroDonePictureBox.Height = 204;
+            Refresh();
+            heroDonePictureBox.Refresh();
+            Thread.Sleep(50);
+            heroDonePictureBox.Width = 192;
+            heroDonePictureBox.Height = 192;
+            Refresh();
+            heroDonePictureBox.Refresh();
+            Thread.Sleep(50);
+            heroDonePictureBox.Width = 179;
+            heroDonePictureBox.Height = 179;
+            Refresh();
+            heroDonePictureBox.Refresh();
+            Thread.Sleep(50);
+            heroDonePictureBox.Width = 166;
+            heroDonePictureBox.Height = 166;
+            Refresh();
+            heroDonePictureBox.Refresh();
+            Thread.Sleep(50);
+            heroDonePictureBox.Width = 153;
+            heroDonePictureBox.Height = 153;
+            Refresh();
+            heroDonePictureBox.Refresh();
+            Thread.Sleep(50);
+            heroDonePictureBox.Width = 140;
+            heroDonePictureBox.Height = 140;
+            Refresh();
+            heroDonePictureBox.Refresh();
+            Thread.Sleep(50);
+            heroDonePictureBox.Width = 128;
+            heroDonePictureBox.Height = 128;
+            Refresh();
+            heroDonePictureBox.Refresh();
         }
     }
 }
