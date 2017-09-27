@@ -29,6 +29,9 @@ namespace UnitOneSummative
 
         private void Form2_Shown(object sender, EventArgs e)
         {
+            ///this part of the program is in charge of the first scene when the user clicks done
+            ///adding in text and then removing it (it's the intro, basically)
+
             Application.DoEvents(); //tells the program to render anything it hasn't yet
             Thread.Sleep(1000); //waits for a second
             sceneOneLabelOne.Visible = true; //sets first label to visible
@@ -44,6 +47,10 @@ namespace UnitOneSummative
             sceneOneLabelTwo.Dispose();
             sceneOneLabelThree.Dispose();
             Refresh(); //refreshes
+
+            ///this part of the program deals with the second scene, our character shrinks down and then starts moving
+            ///i'll probably end up using methods within methods so i can be lazy and write all of my repetetive code only once
+
         }
     }
 }

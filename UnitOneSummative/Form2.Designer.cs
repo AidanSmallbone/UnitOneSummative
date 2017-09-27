@@ -33,6 +33,8 @@
             this.sceneOneLabelOne = new System.Windows.Forms.Label();
             this.sceneOneLabelTwo = new System.Windows.Forms.Label();
             this.sceneOneLabelThree = new System.Windows.Forms.Label();
+            this.sceneTwoLabelOne = new System.Windows.Forms.Label();
+            this.sceneTwoLabelTwo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.heroDonePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,12 +87,40 @@
             this.sceneOneLabelThree.Text = "LET\'S PUT IT TO THE TEST";
             this.sceneOneLabelThree.Visible = false;
             // 
+            // sceneTwoLabelOne
+            // 
+            this.sceneTwoLabelOne.AutoSize = true;
+            this.sceneTwoLabelOne.BackColor = System.Drawing.Color.Black;
+            this.sceneTwoLabelOne.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sceneTwoLabelOne.ForeColor = System.Drawing.Color.LightGreen;
+            this.sceneTwoLabelOne.Location = new System.Drawing.Point(12, 9);
+            this.sceneTwoLabelOne.Name = "sceneTwoLabelOne";
+            this.sceneTwoLabelOne.Size = new System.Drawing.Size(348, 18);
+            this.sceneTwoLabelOne.TabIndex = 4;
+            this.sceneTwoLabelOne.Text = "YOUR HERO EMBARKS ON THEIR MISSION";
+            this.sceneTwoLabelOne.Visible = false;
+            // 
+            // sceneTwoLabelTwo
+            // 
+            this.sceneTwoLabelTwo.AutoSize = true;
+            this.sceneTwoLabelTwo.BackColor = System.Drawing.Color.Black;
+            this.sceneTwoLabelTwo.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sceneTwoLabelTwo.ForeColor = System.Drawing.Color.LightGreen;
+            this.sceneTwoLabelTwo.Location = new System.Drawing.Point(12, 27);
+            this.sceneTwoLabelTwo.Name = "sceneTwoLabelTwo";
+            this.sceneTwoLabelTwo.Size = new System.Drawing.Size(339, 18);
+            this.sceneTwoLabelTwo.TabIndex = 5;
+            this.sceneTwoLabelTwo.Text = "TO DO SOMETHING IMPORTANT, I GUESS.";
+            this.sceneTwoLabelTwo.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.sceneTwoLabelTwo);
+            this.Controls.Add(this.sceneTwoLabelOne);
             this.Controls.Add(this.sceneOneLabelThree);
             this.Controls.Add(this.sceneOneLabelTwo);
             this.Controls.Add(this.sceneOneLabelOne);
@@ -110,5 +140,7 @@
         private System.Windows.Forms.Label sceneOneLabelOne;
         private System.Windows.Forms.Label sceneOneLabelTwo;
         private System.Windows.Forms.Label sceneOneLabelThree;
+        private System.Windows.Forms.Label sceneTwoLabelOne;
+        private System.Windows.Forms.Label sceneTwoLabelTwo;
     }
 }
